@@ -23,17 +23,24 @@ class _ListTileDrawerItemBuilderState extends State<ListTileDrawerItemBuilder> {
         iconImage: Assets.imagesMyInvestments, title: 'My Investments'),
   ];
 
-  bool isActive = true;
+  int currentItem = 0;
   @override
   Widget build(BuildContext context) {
     return SliverList.builder(
         itemCount: listTileItem.length,
         itemBuilder: (context, index) {
           return GestureDetector(
-            onTap: () {},
+            onTap: () {
+              if (index != currentItem) {
+                setState(() {
+                  currentItem = index;
+                });
+              }
+            },
             child: Padding(
               padding: const EdgeInsets.only(top: 20.0),
               child: CustomListTileDrawer(
+                isActive: index == currentItem,
                 listTileItemModel: listTileItem[index],
               ),
             ),
