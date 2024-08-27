@@ -7,10 +7,11 @@ class HomeBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AdaptiveLayout(
+    return Scaffold(
+        body: AdaptiveLayout(
       mobileWidget: (context) => const SizedBox(),
       tabletWidget: (context) => const SizedBox(),
       desktopWidgt: (context) => const DesktopLayout(),
-    );
+    ));
   }
 }
