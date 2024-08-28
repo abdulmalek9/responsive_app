@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_app/widget/all_expenses_card.dart';
+import 'package:responsive_app/widget/all_expenses_card_builder.dart';
 import 'package:responsive_app/widget/all_expenses_header.dart';
 
 class AllExpensesWidget extends StatelessWidget {
@@ -21,12 +21,9 @@ class AllExpensesWidget extends StatelessWidget {
           SizedBox(
             height: 16,
           ),
-          Row(
-            children: [AllExpensesCard(), AllExpensesCard()],
-          )
+          AllExpensesCardBuilder()
         ],
       ),
     );
   }
 }
-

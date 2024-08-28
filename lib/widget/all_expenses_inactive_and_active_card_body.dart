@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:responsive_app/utils/app_images.dart';
+import 'package:responsive_app/models/all_expenses_card_model.dart';
 import 'package:responsive_app/utils/app_styles.dart';
 
 class AllExpensesInActiveCardBody extends StatelessWidget {
   const AllExpensesInActiveCardBody({
     super.key,
+    required this.itemModel,
   });
-
+  final AllExpensesCardModel itemModel;
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
@@ -23,9 +24,13 @@ class AllExpensesInActiveCardBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              SvgPicture.asset(Assets.imagesIncome),
+              CircleAvatar(
+                  radius: 30,
+                  backgroundColor: const Color(0XFFFAFAFA),
+                  child: Center(child: SvgPicture.asset(itemModel.image))),
+              const Spacer(),
               const Icon(Icons.keyboard_arrow_right_outlined),
             ],
           ),
@@ -33,18 +38,18 @@ class AllExpensesInActiveCardBody extends StatelessWidget {
             height: 34,
           ),
           Text(
-            "Income",
+            itemModel.cardName,
             style: AppStyles.styleSemiBold16(context),
           ),
           Text(
-            "April 2022",
+            itemModel.date,
             style: AppStyles.styleRegular14(context),
           ),
           const SizedBox(
             height: 16,
           ),
           Text(
-            "\$20.129",
+            itemModel.money,
             style: AppStyles.styleSemiBold24(context),
           )
         ],

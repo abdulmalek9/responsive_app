@@ -13,12 +13,13 @@ class AllExpensesHeader extends StatelessWidget {
           "ALL Expenses",
           style: AppStyles.styleSemiBold20(context),
         ),
-        // const Expanded(child: SizedBox()),
-
         Container(
-          padding: const EdgeInsets.all(8),
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
           decoration: BoxDecoration(
-            border: Border.all(color: Colors.grey, width: 0.2),
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(
+              color: const Color(0XFFF1F1F1),
+            ),
           ),
           child: Row(
             children: [
@@ -27,9 +28,9 @@ class AllExpensesHeader extends StatelessWidget {
                 style: AppStyles.styleMedium16(context),
               ),
               const SizedBox(
-                width: 12,
+                width: 18,
               ),
-              const Icon(Icons.arrow_drop_down_sharp)
+              const Icon(Icons.keyboard_arrow_down_sharp)
             ],
           ),
         )
