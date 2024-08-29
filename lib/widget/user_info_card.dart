@@ -9,17 +9,20 @@ class UserInfoCard extends StatelessWidget {
   final UserInfoModels userInfoModels;
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Card(
       color: const Color(0xffFAFAFA),
-      child: ListTile(
-        leading: SvgPicture.asset(userInfoModels.image), //Assets.imagesAvatar3
-        title: Text(
-          userInfoModels.title,
-          style: AppStyles.styleSemiBold16(context),
-        ),
-        subtitle: Text(
-          userInfoModels.supTitle,
-          style: AppStyles.styleRegular12(context),
+      child: Center(
+        child: ListTile(
+          leading:
+              SvgPicture.asset(userInfoModels.image), //Assets.imagesAvatar3
+          title: Text(
+            userInfoModels.title,
+            style: AppStyles.styleSemiBold16(context),
+          ),
+          subtitle: Text(
+            userInfoModels.supTitle,
+            style: AppStyles.styleRegular12(context),
+          ),
         ),
       ),
     );

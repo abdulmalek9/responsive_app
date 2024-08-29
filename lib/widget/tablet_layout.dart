@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_app/widget/all_expenses_widget.dart';
+import 'package:responsive_app/widget/quick_invoice_widget.dart';
 
 class TabletLayout extends StatelessWidget {
   const TabletLayout({super.key});
@@ -8,11 +9,11 @@ class TabletLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        Expanded(child: AllExpensesWidget()),
+        AllExpensesWidget(),
         SizedBox(
           height: 20,
         ),
-        Expanded(child: AllExpensesWidget()),
+        QuickInvoiceWidget()
       ],
     );
   }
