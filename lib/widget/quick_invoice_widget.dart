@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_app/widget/custom_container.dart';
+import 'package:responsive_app/widget/custom_info_field.dart';
 import 'package:responsive_app/widget/quick_invoice_body_card.dart';
 import 'package:responsive_app/widget/quick_invoice_header.dart';
 
@@ -17,6 +18,17 @@ class QuickInvoiceWidget extends StatelessWidget {
           height: 24,
         ),
         QuickInvoiceBodyCard(),
+        Padding(
+          padding: EdgeInsets.symmetric(vertical: 24.0),
+          child: Divider(
+            thickness: 1,
+            color: Color(0xffF1F1F1),
+          ),
+        ),
+        CustomInfoField(
+          lable: "Customer name",
+          textHint: "Type customer name",
+        )
       ],
     ));
   }

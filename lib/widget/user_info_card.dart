@@ -10,6 +10,7 @@ class UserInfoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 0,
       color: const Color(0xffFAFAFA),
       child: Center(
         child: ListTile(
