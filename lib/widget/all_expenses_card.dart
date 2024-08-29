@@ -9,8 +9,14 @@ class AllExpensesCard extends StatelessWidget {
   final bool isActive;
   @override
   Widget build(BuildContext context) {
-    return AllExpensesInActiveCardBody(
-      itemModel: itemModel,
-    );
+    return !isActive
+        ? AllExpensesInActiveCardBody(
+            itemModel: itemModel,
+            isActive: isActive,
+          )
+        : AllExpensesActiveCardBody(
+            itemModel: itemModel,
+            isActive: isActive,
+          );
   }
 }
