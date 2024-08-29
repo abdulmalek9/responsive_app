@@ -14,8 +14,7 @@ class UserInfoCard extends StatelessWidget {
       color: const Color(0xffFAFAFA),
       child: Center(
         child: ListTile(
-          leading:
-              SvgPicture.asset(userInfoModels.image), //Assets.imagesAvatar3
+          leading: SvgPicture.asset(userInfoModels.image),
           title: Text(
             userInfoModels.title,
             style: AppStyles.styleSemiBold16(context),

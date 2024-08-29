@@ -9,11 +9,11 @@ class TabletLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Column(
       children: [
-        AllExpensesWidget(),
+        Expanded(flex: 3, child: AllExpensesWidget()),
         SizedBox(
           height: 20,
         ),
-        QuickInvoiceWidget()
+        Expanded(flex: 3, child: QuickInvoiceWidget())
       ],
     );
   }
