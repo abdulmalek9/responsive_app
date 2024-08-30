@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_app/widget/custom_drawer.dart';
+import 'package:responsive_app/widget/mobile_layout.dart';
 import 'package:responsive_app/widget/tablet_layout.dart';
 
 class DesktopLayout extends StatelessWidget {
@@ -14,7 +15,7 @@ class DesktopLayout extends StatelessWidget {
           width: 32,
         ),
         Expanded(flex: 2, child: TabletLayout()),
-        Expanded(flex: 1, child: SizedBox())
+        Expanded(flex: 1, child: MobileLayout())
       ],
     );
   }

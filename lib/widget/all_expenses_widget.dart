@@ -10,12 +10,14 @@ class AllExpensesWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return const CustomContainer(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           AllExpensesHeader(),
           SizedBox(
             height: 16,
           ),
-          AllExpensesCardBuilder()
+          AllExpensesCardBuilder(),
         ],
       ),
     );
