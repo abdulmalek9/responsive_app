@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:responsive_app/models/list_tile_item_model.dart';
 import 'package:responsive_app/utils/app_styles.dart';
@@ -35,9 +36,12 @@ class ActiveListTileWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(listTileItemModel.iconImage),
-      trailing: Container(
-        width: 4,
-        color: const Color(0xFF4EB7F2),
+      trailing: Animate(
+        effects: const [FadeEffect()],
+        child: Container(
+          width: 4,
+          color: const Color(0xFF4EB7F2),
+        ),
       ),
       title: Text(
         listTileItemModel.title,

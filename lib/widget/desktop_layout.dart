@@ -13,7 +13,8 @@ class DesktopLayout extends StatelessWidget {
         SizedBox(
           width: 32,
         ),
-        Expanded(flex: 2, child: TabletLayout())
+        Expanded(flex: 2, child: TabletLayout()),
+        Expanded(flex: 1, child: SizedBox())
       ],
     );
   }
