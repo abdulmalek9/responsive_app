@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_app/widget/custom_dotes.dart';
+import 'package:responsive_app/widget/mycard_transaction_incom_item/custom_dotes.dart';
 
 class DotesIndcator extends StatelessWidget {
   const DotesIndcator({super.key, required this.currentIndex});

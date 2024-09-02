@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_app/utils/app_styles.dart';
-import 'package:responsive_app/widget/dotes_indcator.dart';
-import 'package:responsive_app/widget/my_card_pages_view.dart';
+import 'package:responsive_app/widget/mycard_transaction_incom_item/dotes_indcator.dart';
+import 'package:responsive_app/widget/mycard_transaction_incom_item/my_card_pages_view.dart';
 
 class MyCardSection extends StatefulWidget {
   const MyCardSection({super.key});

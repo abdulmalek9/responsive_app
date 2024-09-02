@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_app/widget/buttons_row.dart';
+import 'package:responsive_app/widget/quick_invoic_item/buttons_row.dart';
 import 'package:responsive_app/widget/custom_container.dart';
-import 'package:responsive_app/widget/customer_info_row_and_item_info_row.dart';
-import 'package:responsive_app/widget/quick_invoice_body_card.dart';
-import 'package:responsive_app/widget/quick_invoice_header.dart';
+import 'package:responsive_app/widget/quick_invoic_item/customer_info_row_and_item_info_row.dart';
+import 'package:responsive_app/widget/quick_invoic_item/quick_invoice_body_card.dart';
+import 'package:responsive_app/widget/quick_invoic_item/quick_invoice_header.dart';
 
 class QuickInvoiceWidget extends StatelessWidget {
   const QuickInvoiceWidget({super.key});

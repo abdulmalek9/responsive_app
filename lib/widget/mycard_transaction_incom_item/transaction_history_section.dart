@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_app/widget/transaction_section_body.dart';
-import 'package:responsive_app/widget/transaction_section_header.dart';
+import 'package:responsive_app/widget/mycard_transaction_incom_item/transaction_section_body.dart';
+import 'package:responsive_app/widget/mycard_transaction_incom_item/transaction_section_header.dart';
 
 class TransactionHistorySection extends StatelessWidget {
   const TransactionHistorySection({super.key});

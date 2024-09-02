@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_app/models/flow_chart_details_model.dart';
 import 'package:responsive_app/utils/app_styles.dart';
-import 'package:responsive_app/widget/custom_dot_incom.dart';
+import 'package:responsive_app/widget/mycard_transaction_incom_item/custom_dot_incom.dart';
 
 class FlowChartDetails extends StatelessWidget {
   const FlowChartDetails({
@@ -12,8 +12,6 @@ class FlowChartDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      // contentPadding: EdgeInsets.zero,
-
       trailing: Text(
         details.value,
         style: AppStyles.styleMedium16(context),

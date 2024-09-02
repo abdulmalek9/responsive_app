@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_app/widget/custom_info_field.dart';
+import 'package:responsive_app/widget/quick_invoic_item/custom_info_field.dart';
 
 class CustomerInfoRow extends StatelessWidget {
   const CustomerInfoRow({

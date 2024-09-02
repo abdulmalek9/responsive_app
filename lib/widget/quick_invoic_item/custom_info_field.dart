@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_app/utils/app_styles.dart';
-import 'package:responsive_app/widget/custom_text_field.dart';
+import 'package:responsive_app/widget/quick_invoic_item/custom_text_field.dart';
 
 class CustomInfoField extends StatelessWidget {
   const CustomInfoField(

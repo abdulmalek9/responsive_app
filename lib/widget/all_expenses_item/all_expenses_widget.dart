@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_app/widget/all_expenses_card_builder.dart';
-import 'package:responsive_app/widget/all_expenses_header.dart';
+import 'package:responsive_app/widget/all_expenses_item/all_expenses_card_builder.dart';
+import 'package:responsive_app/widget/all_expenses_item/all_expenses_header.dart';
 import 'package:responsive_app/widget/custom_container.dart';
 
 class AllExpensesWidget extends StatelessWidget {

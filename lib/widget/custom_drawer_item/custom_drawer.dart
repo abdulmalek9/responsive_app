@@ -3,7 +3,7 @@ import 'package:responsive_app/models/list_tile_item_model.dart';
 import 'package:responsive_app/models/user_info_models.dart';
 import 'package:responsive_app/utils/app_images.dart';
 import 'package:responsive_app/widget/inactive_and_active_listtile_item.dart';
-import 'package:responsive_app/widget/list_tile_drawer_item_builder.dart';
+import 'package:responsive_app/widget/custom_drawer_item/list_tile_drawer_item_builder.dart';
 import 'package:responsive_app/widget/user_info_card.dart';
 
 class CustomDrawer extends StatelessWidget {

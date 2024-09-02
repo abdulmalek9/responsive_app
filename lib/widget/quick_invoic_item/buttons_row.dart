@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_app/widget/custom_button.dart';
+import 'package:responsive_app/widget/quick_invoic_item/custom_button.dart';
 
 class ButtonsRow extends StatelessWidget {
   const ButtonsRow({

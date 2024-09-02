@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_app/models/flow_chart_details_model.dart';
-import 'package:responsive_app/widget/flowchart_details.dart';
+import 'package:responsive_app/widget/mycard_transaction_incom_item/flowchart_details.dart';
 
 class FlowChartBodyInfo extends StatelessWidget {
   const FlowChartBodyInfo({

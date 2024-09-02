@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_app/widget/my_card_section.dart';
-import 'package:responsive_app/widget/transaction_history_section.dart';
+import 'package:responsive_app/widget/mycard_transaction_incom_item/my_card_section.dart';
+import 'package:responsive_app/widget/mycard_transaction_incom_item/transaction_history_section.dart';
 
-class MobileLayOutBody extends StatelessWidget {
-  const MobileLayOutBody({super.key});
+class MyCardAndTransactionBody extends StatelessWidget {
+  const MyCardAndTransactionBody({super.key});
 
   @override
   Widget build(BuildContext context) {

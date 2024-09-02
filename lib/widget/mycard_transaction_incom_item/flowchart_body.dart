@@ -1,7 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_app/models/piechart_model.dart';
-import 'package:responsive_app/widget/flowchart_bod_info.dart';
+import 'package:responsive_app/widget/mycard_transaction_incom_item/flowchart_bod_info.dart';
 
 class FlowChartBody extends StatefulWidget {
   const FlowChartBody({super.key});
@@ -15,6 +15,7 @@ class _FlowChartBodyState extends State<FlowChartBody> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
         Expanded(
           child: AspectRatio(
@@ -28,7 +29,7 @@ class _FlowChartBodyState extends State<FlowChartBody> {
                         pieTouchResponse?.touchedSection?.touchedSectionIndex;
                     if (activeIndex != currentIndex) {
                       activeIndex = currentIndex ?? -1;
-                      print(activeIndex);
+
                       setState(() {});
                     }
                   },

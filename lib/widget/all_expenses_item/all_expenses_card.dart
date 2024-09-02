@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:responsive_app/models/all_expenses_card_model.dart';
-import 'package:responsive_app/widget/all_expenses_inactive_and_active_card_body.dart';
+import 'package:responsive_app/widget/all_expenses_item/all_expenses_inactive_and_active_card_body.dart';
 
 class AllExpensesCard extends StatelessWidget {
   const AllExpensesCard(
