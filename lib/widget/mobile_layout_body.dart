@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_app/widget/flow_chart_sction.dart';
 import 'package:responsive_app/widget/my_card_section.dart';
 import 'package:responsive_app/widget/transaction_history_section.dart';
 
@@ -20,10 +19,6 @@ class MobileLayOutBody extends StatelessWidget {
           ),
         ),
         TransactionHistorySection(),
-        SizedBox(
-          height: 24,
-        ),
-        FlowChartSction()
       ],
     );
   }
