@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_app/widget/mycard_transaction_incom_item/flowchart_bod_info.dart';
+import 'package:responsive_app/widget/mycard_transaction_incom_item/flowchart_body_info.dart';
 import 'package:responsive_app/widget/mycard_transaction_incom_item/pie_chart_builder.dart';
 
 class FlowChartBody extends StatelessWidget {
@@ -10,7 +10,7 @@ class FlowChartBody extends StatelessWidget {
     return const Row(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        PieChartBuilder(),
+        Expanded(child: PieChartBuilder()),
         SizedBox(
           width: 4,
         ),

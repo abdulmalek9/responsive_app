@@ -1,15 +1,16 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_app/models/piechart_model.dart';
+import 'package:responsive_app/utils/app_styles.dart';
 
-class PieChartBuilder extends StatefulWidget {
-  const PieChartBuilder({super.key});
+class CustomPieChartBuilder extends StatefulWidget {
+  const CustomPieChartBuilder({super.key});
 
   @override
-  State<PieChartBuilder> createState() => _PieChartBuilderState();
+  State<CustomPieChartBuilder> createState() => _CustomPieChartBuilderState();
 }
 
-class _PieChartBuilderState extends State<PieChartBuilder> {
+class _CustomPieChartBuilderState extends State<CustomPieChartBuilder> {
   int activeIndex = -1;
   @override
   Widget build(BuildContext context) {
@@ -38,17 +39,29 @@ class _PieChartBuilderState extends State<PieChartBuilder> {
 
   sectionGenrator({required int activeIndex}) {
     List<PiechartModel> pieModel = [
-      PiechartModel(value: 22, color: const Color(0xFFE2DECD)),
-      PiechartModel(value: 20, color: const Color(0xFF064061)),
-      PiechartModel(value: 25, color: const Color(0xFF4EB7F2)),
-      PiechartModel(value: 40, color: const Color(0xFF208CC8)),
+      PiechartModel(title: "other", value: 22, color: const Color(0xFFE2DECD)),
+      PiechartModel(
+          title: "Product royalti", value: 20, color: const Color(0xFF064061)),
+      PiechartModel(
+          title: "Design product", value: 25, color: const Color(0xFF4EB7F2)),
+      PiechartModel(
+          title: "Design service", value: 40, color: const Color(0xFF208CC8)),
     ];
     var pie = List<PieChartSectionData>.generate(4, (index) {
       return PieChartSectionData(
+        titleStyle: AppStyles.styleSemiBold16(context).copyWith(
+            color: index == 0
+                ? null
+                : activeIndex == index
+                    ? null
+                    : Colors.white),
+        title: activeIndex == index ? pieModel[index].title : null,
+        titlePositionPercentageOffset:
+            (index == 1 && activeIndex == index) ? 1.4 : null,
         value: pieModel[index].value,
         color: pieModel[index].color,
-        radius: activeIndex == index ? 30 : 24,
-        showTitle: false,
+        radius: activeIndex == index ? 50 : 40,
+        showTitle: true,
       );
     });
     return pie;
