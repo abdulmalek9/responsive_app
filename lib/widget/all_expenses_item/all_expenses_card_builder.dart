@@ -35,28 +35,59 @@ class _AllExpensesCardBuilderState extends State<AllExpensesCardBuilder> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: itemModel.asMap().entries.map((e) {
-        int index = e.key;
-        var item = e.value;
-        return Expanded(
+      children: [
+        Expanded(
           child: GestureDetector(
             onTap: () {
-              if (index != currentItem) {
+              if (0 != currentItem) {
                 setState(() {
-                  currentItem = index;
+                  currentItem = 0;
                 });
               }
             },
-            child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: index == 1 ? 12 : 0),
-              child: AllExpensesCard(
-                isActive: currentItem == index,
-                itemModel: item,
-              ),
+            child: AllExpensesCard(
+              isActive: currentItem == 0,
+              itemModel: itemModel[0],
             ),
           ),
-        );
-      }).toList(),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              if (1 != currentItem) {
+                setState(() {
+                  currentItem = 1;
+                });
+              }
+            },
+            child: AllExpensesCard(
+              isActive: currentItem == 1,
+              itemModel: itemModel[1],
+            ),
+          ),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              if (2 != currentItem) {
+                setState(() {
+                  currentItem = 2;
+                });
+              }
+            },
+            child: AllExpensesCard(
+              isActive: currentItem == 2,
+              itemModel: itemModel[2],
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

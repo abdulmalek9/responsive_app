@@ -33,20 +33,29 @@ class AllExpensesInActiveCardBody extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          Text(
-            itemModel.cardName,
-            style: AppStyles.styleSemiBold16(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.cardName,
+              style: AppStyles.styleSemiBold16(context),
+            ),
           ),
-          Text(
-            itemModel.date,
-            style: AppStyles.styleRegular14(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.date,
+              style: AppStyles.styleRegular14(context),
+            ),
           ),
           const SizedBox(
             height: 16,
           ),
-          Text(
-            itemModel.money,
-            style: AppStyles.styleSemiBold24(context),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.money,
+              style: AppStyles.styleSemiBold24(context),
+            ),
           )
         ],
       ),
@@ -81,24 +90,33 @@ class AllExpensesActiveCardBody extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          Text(
-            itemModel.cardName,
-            style: AppStyles.styleSemiBold16(context)
-                .copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.cardName,
+              style: AppStyles.styleSemiBold16(context)
+                  .copyWith(color: Colors.white),
+            ),
           ),
-          Text(
-            itemModel.date,
-            style: AppStyles.styleRegular14(context).copyWith(
-              color: const Color(0xFFFAFAFA),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.date,
+              style: AppStyles.styleRegular14(context).copyWith(
+                color: const Color(0xFFFAFAFA),
+              ),
             ),
           ),
           const SizedBox(
             height: 16,
           ),
-          Text(
-            itemModel.money,
-            style: AppStyles.styleSemiBold24(context)
-                .copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(
+              itemModel.money,
+              style: AppStyles.styleSemiBold24(context)
+                  .copyWith(color: Colors.white),
+            ),
           )
         ],
       ),

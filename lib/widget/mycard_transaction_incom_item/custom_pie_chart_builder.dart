@@ -31,6 +31,7 @@ class _CustomPieChartBuilderState extends State<CustomPieChartBuilder> {
             },
           ),
           sectionsSpace: 0.0,
+          // centerSpaceRadius: 40,
           sections: sectionGenrator(activeIndex: activeIndex),
         ),
       ),
@@ -57,7 +58,7 @@ class _CustomPieChartBuilderState extends State<CustomPieChartBuilder> {
                     : Colors.white),
         title: activeIndex == index ? pieModel[index].title : null,
         titlePositionPercentageOffset:
-            (index == 1 && activeIndex == index) ? 1.4 : null,
+            (index == 1 && activeIndex == index) ? 1.2 : null,
         value: pieModel[index].value,
         color: pieModel[index].color,
         radius: activeIndex == index ? 50 : 40,

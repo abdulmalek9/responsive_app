@@ -16,18 +16,27 @@ class AllExpensesCardHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        CircleAvatar(
-          radius: 30,
-          backgroundColor: isActive
-              ? const Color(0XFFFFFFFF).withOpacity(0.10000000149011612)
-              : const Color(0xFFFAFAFA),
-          child: Padding(
-            padding: const EdgeInsets.all(14.0),
-            child: SvgPicture.asset(
-              itemModel.image,
-              colorFilter: ColorFilter.mode(
-                isActive ? Colors.white : const Color(0xff4EB7F2),
-                BlendMode.srcIn,
+        Flexible(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 60, maxHeight: 60),
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: Container(
+                decoration: ShapeDecoration(
+                    color: isActive
+                        ? const Color(0XFFFFFFFF)
+                            .withOpacity(0.10000000149011612)
+                        : const Color(0xFFFAFAFA),
+                    shape: const OvalBorder()),
+                child: Center(
+                  child: SvgPicture.asset(
+                    itemModel.image,
+                    colorFilter: ColorFilter.mode(
+                      isActive ? Colors.white : const Color(0xff4EB7F2),
+                      BlendMode.srcIn,
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
