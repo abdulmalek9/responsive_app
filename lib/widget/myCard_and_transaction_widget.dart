@@ -8,8 +8,7 @@ class MyCardAndTransactionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-        child: Column(
+    return const Column(
       children: [
         CustomContainer(child: MyCardAndTransactionBody()),
         SizedBox(
@@ -17,6 +16,6 @@ class MyCardAndTransactionWidget extends StatelessWidget {
         ),
         CustomContainer(child: FlowChartSction())
       ],
-    ));
+    );
   }
 }

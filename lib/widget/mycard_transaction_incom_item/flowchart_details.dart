@@ -12,13 +12,14 @@ class FlowChartDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      contentPadding: const EdgeInsets.all(6),
       trailing: Text(
         details.value,
-        style: AppStyles.styleMedium16(context),
+        style: AppStyles.styleMedium16(context).copyWith(fontSize: 12),
       ),
       title: Text(
         details.title,
-        style: AppStyles.styleRegular16(context),
+        style: AppStyles.styleRegular16(context).copyWith(fontSize: 14),
       ),
       leading: CustomDot(
         dotColor: details.color,

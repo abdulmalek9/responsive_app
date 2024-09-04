@@ -19,15 +19,23 @@ class FlowChartBodyInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-      shrinkWrap: true,
-      physics: const NeverScrollableScrollPhysics(),
-      itemCount: 4,
-      itemBuilder: (context, index) {
+    return Column(
+      children: details.map((e) {
         return FlowChartDetails(
-          details: details[index],
+          details: e,
         );
-      },
+      }).toList(),
     );
+
+    // ListView.builder(
+    //   shrinkWrap: true,
+    //   physics: const NeverScrollableScrollPhysics(),
+    //   itemCount: 4,
+    //   itemBuilder: (context, index) {
+    //     return FlowChartDetails(
+    //       details: details[index],
+    //     );
+    //   },
+    // );
   }
 }

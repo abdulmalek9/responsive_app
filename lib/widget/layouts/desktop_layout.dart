@@ -15,20 +15,44 @@ class DesktopLayout extends StatelessWidget {
           width: 32,
         ),
         Expanded(
-            flex: 3,
-            child: Padding(
-              padding: EdgeInsets.only(top: 40.0),
-              child: AllExpensesAndQuickInvoiceWidget(),
-            )),
+          flex: 4,
+          child: CustomScrollView(
+            slivers: [
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: HomeViewInDesktop(),
+              )
+            ],
+          ),
+        )
+      ],
+    );
+  }
+}
+
+class HomeViewInDesktop extends StatelessWidget {
+  const HomeViewInDesktop({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Row(
+      children: [
+        Expanded(
+          flex: 2,
+          child: Padding(
+            padding: EdgeInsets.only(top: 40.0),
+            child: AllExpensesAndQuickInvoiceWidget(),
+          ),
+        ),
         SizedBox(
           width: 24,
         ),
         Expanded(
-            flex: 2,
-            child: Padding(
-              padding: EdgeInsets.only(top: 40.0),
-              child: MyCardAndTransactionWidget(),
-            ))
+          child: Padding(
+            padding: EdgeInsets.only(top: 40.0),
+            child: MyCardAndTransactionWidget(),
+          ),
+        )
       ],
     );
   }
