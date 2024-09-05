@@ -1,8 +1,14 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_app/widget/home_body.dart';
 
 void main() {
-  runApp(const ResponsiveApp());
+  runApp(
+    DevicePreview(
+      enabled: false,
+      builder: (context) => const ResponsiveApp(),
+    ),
+  );
 }
 
 class ResponsiveApp extends StatelessWidget {
@@ -10,9 +16,11 @@ class ResponsiveApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      locale: DevicePreview.locale(context),
+      builder: DevicePreview.appBuilder,
       debugShowCheckedModeBanner: false,
-      home: HomeBody(),
+      home: const HomeBody(),
     );
   }
 }
